@@ -1,7 +1,14 @@
-*{margin:0;padding:0;-webkit-box-sizing:border-box;box-sizing:border-box}a{color:inherit;text-decoration:none}li{list-style:none}
--decoration: none;
+*{margin:0;padding:0;-webkit-box-sizing:border-box;box-sizing:border-box}a{color:inherit;text-decoration:none}li{list-style:none}body{font-family:'Work Sans', sans-serif;font-weight:100}div#front section{height:100vh;position:relative}div#front section div.title{position:absolute;top:50%;left:10%;-webkit-transform:translateY(-50%);transform:translateY(-50%)}div#front section div.title h1{font-weight:100;font-size:120px}div#front section div.title p{font-size:48px}div#front section ul.j{position:absolute;bottom:0}div#front section ul{display:-webkit-box;display:-ms-flexbox;display:flex}div#front section ul li{-webkit-box-flex:1;-ms-flex:1;flex:1}div#front section ul figure{width:300px;padding:50px}div#front section ul figure img{width:200px;height:200px;-o-object-fit:cover;object-fit:cover;-o-object-position:center;object-position:center}
+ont section ul figure {
+  width: 300px;
+  padding: 50px;
 }
 
-li {
-  list-style: none;
+div#front section ul figure img {
+  width: 200px;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }

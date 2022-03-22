@@ -11,3 +11,47 @@ a {
 li {
   list-style: none;
 }
+body {
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 100;
+}
+div#front {
+  section {
+    height: 100vh;
+    position: relative;
+    div.title {
+      position: absolute;
+      top: 50%;
+      left: 10%;
+      transform: translateY(-50%);
+
+      h1 {
+        font-weight: 100;
+        font-size: 120px;
+      }
+      p {
+        font-size: 48px;
+      }
+    }
+    ul.j {
+      position: absolute;
+      bottom: 0;
+    }
+    ul {
+      display: flex;
+      li {
+        flex: 1;
+      }
+      figure {
+        width: 300px;
+        padding: 50px;
+        img {
+          width: 200px;
+          height: 200px;
+          object-fit: cover;
+          object-position: center;
+        }
+      }
+    }
+  }
+}
