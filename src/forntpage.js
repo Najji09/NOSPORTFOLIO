@@ -1,15 +1,11 @@
 import React from 'react';
-const imgLength = [];
-for (let i = 1; i <= 12; i++) {
-  imgLength.push(i);
-}
 
 const FrontPage = () => {
   return (
     <section className="front">
       <div className="title">
-        <h1>NOS</h1>
-        <p>WANDERING</p>
+        <h1 className="title_big">NOS</h1>
+        <p className="title_big">WANDERING</p>
       </div>
     </section>
   );

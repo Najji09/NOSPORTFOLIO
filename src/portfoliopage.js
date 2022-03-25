@@ -1,6 +1,12 @@
-import React from 'react';
-
 import Img from './Img';
+
+import React from 'react';
+import { useRef, useEffect } from 'react';
+
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 const ImageGallery = (props) => {
   let imgAmount = props.name === 'g' ? 16 : 12;
