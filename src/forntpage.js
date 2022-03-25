@@ -31,12 +31,10 @@ const ImgUl = (props) => {
 const FrontPage = () => {
   return (
     <section className="front">
-      <ImgUl name="g" />
       <div className="title">
         <h1>NOS</h1>
         <p>WANDERING</p>
       </div>
-      <ImgUl name="j" />
     </section>
   );
 };

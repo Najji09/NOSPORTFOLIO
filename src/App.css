@@ -17,6 +17,8 @@ li {
 body {
   font-family: 'Work Sans', sans-serif;
   font-weight: 100;
+  overflow-x: hidden;
+  background-color: #eee;
 }
 
 div section.front {
@@ -72,17 +74,66 @@ section.gallery {
   height: 200vh;
 }
 
+section.gallery.g {
+  height: 250vh;
+}
+
 section.gallery h1 {
-  font-size: 72px;
+  font-size: 64px;
   font-weight: 100;
-  position: relative;
+  position: absolute;
   z-index: 3;
 }
 
-section.gallery img {
-  width: 200px;
-  height: 300px;
+section.gallery h1.g {
+  top: 14vw;
+  left: 10vw;
+}
+
+section.gallery h1.j {
+  top: 24vw;
+  right: 20vw;
+}
+
+section.gallery ul.wrap {
+  position: relative;
+}
+
+section.gallery ul.wrap::after {
+  clear: both;
+  display: block;
+  content: '';
+}
+
+section.gallery ul.wrap > li {
+  float: left;
+}
+
+section.gallery ul.wrap > li > ul {
+  position: relative;
+}
+
+section.gallery ul.wrap > li > ul li {
+  width: 20vw;
+  height: 28vw;
+  padding: 2vw;
+}
+
+section.gallery ul.wrap > li > ul li img {
+  width: 16vw;
+  height: 24vw;
   -o-object-fit: cover;
      object-fit: cover;
-  position: absolute;
+}
+
+section.gallery > ul.g {
+  left: 20vw;
+}
+
+section.gallery > ul.g > li:nth-of-type(odd) > ul {
+  top: 100px;
+}
+
+section.gallery > ul.j > li:nth-of-type(even) > ul {
+  top: 100px;
 }

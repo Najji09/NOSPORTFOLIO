@@ -14,6 +14,8 @@ li {
 body {
   font-family: 'Work Sans', sans-serif;
   font-weight: 100;
+  overflow-x: hidden;
+  background-color: #eee;
 }
 div {
   section.front {
@@ -55,16 +57,57 @@ div {
 section.gallery {
   position: relative;
   height: 200vh;
-  h1 {
-    font-size: 72px;
-    font-weight: 100;
-    position: relative;
-    z-index: 3;
+  &.g {
+    height: 250vh;
   }
-  img {
-    width: 200px;
-    height: 300px;
-    object-fit: cover;
+  h1 {
+    font-size: 64px;
+    font-weight: 100;
     position: absolute;
+    z-index: 3;
+    &.g {
+      top: 14vw;
+      left: 10vw;
+    }
+    &.j {
+      top: 24vw;
+      right: 20vw;
+    }
+  }
+  ul.wrap {
+    position: relative;
+    &::after {
+      clear: both;
+      display: block;
+      content: '';
+    }
+    > li {
+      float: left;
+
+      > ul {
+        position: relative;
+        li {
+          width: 20vw;
+          height: 28vw;
+          padding: 2vw;
+          img {
+            width: 16vw;
+            height: 24vw;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+  }
+  > ul.g {
+    left: 20vw;
+    > li:nth-of-type(odd) > ul {
+      top: 100px;
+    }
+  }
+  > ul.j {
+    > li:nth-of-type(even) > ul {
+      top: 100px;
+    }
   }
 }
