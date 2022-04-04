@@ -1,0 +1,147 @@
+@charset "utf-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+body {
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 100;
+  overflow-x: hidden;
+  background-color: #eee;
+}
+div {
+  section.front {
+    height: 100vh;
+    position: relative;
+    div.title {
+      position: absolute;
+      top: 50%;
+      padding: 5% 0 5% 10%;
+      transform: translateY(-50%);
+      width: 100vw;
+      left: 0;
+      background-image: url('../public/img/g/10.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      &::after {
+        display: block;
+        content: '';
+        left: 0;
+        position: absolute;
+        top: 10%;
+        width: 100%;
+        height: 10px;
+        background-color: #eee;
+        z-index: 10;
+      }
+      &::before {
+        display: block;
+        content: '';
+        left: 0;
+        position: absolute;
+        bottom: 10%;
+        width: 100%;
+        height: 10px;
+        background-color: #eee;
+        z-index: 10;
+      }
+
+      h1 {
+        font-weight: 100;
+        font-size: 120px;
+        line-height: 150px;
+      }
+      p {
+        font-size: 48px;
+        line-height: 92px;
+      }
+    }
+  }
+}
+section.gallery {
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 10vh;
+    width: 90vw;
+    right: 0;
+    height: 5px;
+    background-color: #555;
+  }
+  position: relative;
+  height: 230vh;
+  &.g {
+    margin-top: 5%;
+    height: 280vh;
+
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: 10vh;
+      left: 0;
+      width: 90vw;
+      height: 5px;
+      background-color: #555;
+    }
+  }
+  h1 {
+    font-size: 64px;
+    font-weight: 100;
+    position: absolute;
+    z-index: 3;
+    &.g {
+      top: 14vw;
+      left: 10vw;
+    }
+    &.j {
+      top: 14vw;
+      right: 20vw;
+    }
+  }
+  ul.wrap {
+    position: relative;
+    &::after {
+      clear: both;
+      display: block;
+      content: '';
+    }
+    > li {
+      float: left;
+
+      > ul {
+        position: relative;
+        li {
+          width: 20vw;
+          height: 28vw;
+          padding: 2vw;
+          img {
+            width: 16vw;
+            height: 24vw;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+  }
+  > ul.g {
+    left: 20vw;
+    > li:nth-of-type(odd) > ul {
+      top: 100px;
+    }
+  }
+  > ul.j {
+    > li:nth-of-type(even) > ul {
+      top: 100px;
+    }
+  }
+}
